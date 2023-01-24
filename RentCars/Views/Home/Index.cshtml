@@ -32,10 +32,10 @@
     
     <div class="find">
         <form class="find"  asp-controller="Rent" asp-action="FindCars" method="post">
-              <p><input class="input-group-text" name="city" type="text" placeholder="Wybierz miasto"/></p>
-              <p><input class="input-group-text"  id="dateRent" name="dayOfRent" type="date" min="today" placeholder="Data odbioru" /></p>
-              <p><input class="input-group-text" id="dateReturn" name="dayOfReturn" type="date" placeholder="Data zwrotu"/></p>
-              <p><input type="submit" class="btn btn-primary"/></p>
+              <p><input class="input-group-text" name="city" type="text" placeholder="Wybierz miasto" required /></p>
+              <p><input class="input-group-text"  id="dateRent" name="dayOfRent" type="date" min="today" placeholder="Data odbioru" required /></p>
+              <p><input class="input-group-text" id="dateReturn" name="dayOfReturn" type="date" placeholder="Data zwrotu" required /></p>
+              <p><input type="submit" class="btn btn-primary" required /></p>
         </form>
     </div>
 
