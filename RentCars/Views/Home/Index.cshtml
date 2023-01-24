@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="container-kontakt">
+
+        <span>Rezerwacje:</span>
+        <a href="#">   5324467</a>
+        <a href="#">Rental@Rental.com</a>
+     
+</section>
+
+<section>
+
+    <div class="hello-page">
+        <h4>
+           <strong>Wypożyczalnia samochodów <span style="color:blue"> Rental</span></strong> 
+        </h4>
+    </div>
+
+</section>
+
+
+
+<section class="find-car">
+    <div class="container">
+    <div class="info">
+        <p>Bezpłatne odwołanie rezerwacji</p>
+        <p>Jesteśmy w wiekszości dużych miast w Polsce</p>
+        <p>W ofercie najnowsze samochody</p>
+    </div>
+    
+    <div class="find">
+        <form class="find"  asp-controller="Rent" asp-action="FindCars" method="post">
+              <p><input class="input-group-text" name="city" type="text" placeholder="Wybierz miasto"/></p>
+              <p><input class="input-group-text"  id="dateRent" name="dayOfRent" type="date" min="today" placeholder="Data odbioru" /></p>
+              <p><input class="input-group-text" id="dateReturn" name="dayOfReturn" type="date" placeholder="Data zwrotu"/></p>
+              <p><input type="submit" class="btn btn-primary"/></p>
+        </form>
+    </div>
+
+    </div>
+</section>
+
+<script>
+var date = new Date();
+var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+date.setDate(date.getDate() + 1);
+var tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+
+document.getElementById("dateRent").setAttribute("min", today);
+document.getElementById("dateReturn").setAttribute("min", tommorow);
+</script>
+
+
+
+
+

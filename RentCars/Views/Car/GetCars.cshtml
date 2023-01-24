@@ -1,0 +1,56 @@
+﻿@model IEnumerable<RentCars.ModelsDto.CarDto>
+@{
+    ViewData["Title"] = "GetCars";
+}
+  <link rel="stylesheet" href="~/css/CarsCss.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+   
+  <section class="car-section" >
+
+<div class="align-content-center">
+
+@foreach (var item in Model)
+{
+    var imagePath = "~/Images/" + (item.Model + ".jpg");
+ 
+            <div class="container-cars">
+
+                     <div class="car-image">
+                      <img  src="@imagePath" class="jpg"  asp-append-version="true" /> 
+                     </div>
+
+                     <div class="car">
+
+
+                         <div class="car-title">
+                             <p><strong>@item.Brand</strong></p>
+
+                             <p><strong>@item.Model</strong></p>
+                          </div>
+
+                          <div class="car-details">
+                             <p>@item.Milage km</p>
+                             <p>@item.MaxSpeed km/h</p>
+                             <p>@item.Year r.</p>
+                          </div>
+                          <div class="car-details">
+                             <p>@item.NumberOfSeats seats</p>
+                             <p>@item.Price zł</p>
+                             <p>@item.Transmisson </p>
+                          </div>
+
+                          <div class="find-btn">
+                              <a class="btn btn-primary btn-find" asp-action="GetDetails" asp-controller="Car" asp-route-Id="@item.Id">Details</a>
+                          </div>
+                     </div>
+                 
+                    
+                
+
+            </div>
+            <br />
+}
+</div>
+</section>
+
+

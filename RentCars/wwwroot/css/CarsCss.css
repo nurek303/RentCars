@@ -1,0 +1,75 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    line-height: 1;
+}
+
+.container-cars {
+    max-width: 1000px;
+    max-height: 300px;
+    margin: 10px 10px;
+    display: flex;
+    border: solid black 2px;
+}
+
+.car {
+    float: left;
+    width: 50%;
+}
+
+.car-image {
+    max-height: 50%;
+    max-width: 50%;
+    float: left;
+    width: 50%;
+}
+
+.car-details {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.find-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-find {
+    width: 300px;
+}
+
+.jpg {
+    height: 296px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.car-title {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.car-section {
+    display: flex;
+    justify-content: center;
+}

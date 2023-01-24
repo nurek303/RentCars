@@ -1,0 +1,16 @@
+﻿@model RentCars.ModelsDto.CarDto
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form asp-action="DeletePost" asp-controller="Car">
+    <input asp-for="Id" hidden/>
+    <p>Czy na pewno chcesz usunąc ten samochód?</p>
+    <p><input type="text" placeholder="@Model.Brand" disabled="disabled"/></p>
+    <p><input type="text" placeholder="@Model.Model" disabled="disabled"/></p>
+    <p><input type="text" placeholder="@Model.CarPlate" disabled="disabled"/></p>
+
+    <p><a class="btn btn-primary">Powrót</a></p>
+    <p><input class="btn btn-danger"  type="submit" /></p>
+</form>
+

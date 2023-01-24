@@ -1,0 +1,88 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.container-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.container-kontakt {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    background: rgb(0, 204, 204);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.hello-page {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.find-car {
+    padding: 15px;
+    margin-top: 20px;
+    background-color: rgb(0, 204, 204);
+    margin-inline-start: auto;
+    border-radius: 10px;
+    color: white;
+}
+
+    .find-car div {
+        position: relative;
+        width: auto;
+    }
+
+.info {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background: rgb(0, 204, 204);
+    border-radius: 10px;
+}
+
+.find {
+    display: flex;
+    justify-content:center;
+ 
+}
+.find p {
+    width:207px !important;
+    margin-left:40px
+}

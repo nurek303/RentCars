@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RentCars.ModelsDto.CarDto>
+@{
+    ViewData["Title"] = "GetCarsAdmin";
+}
+
+<a class="btn btn-succes nav-link text-dark" asp-area="" asp-controller="Car" asp-action="Create">Create</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>CarPlate</th>
+            <th>Vin</th>
+            <th>Image</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var car in Model)
+            {
+                 var imagePath = "~/Images/" + (car.Model + ".jpg");
+
+                <tr>
+                    <td class="td-text"><div>@car.Id</div></td>
+                    <td class="td-text">@car.Brand</td>
+                    <td class="td-text">@car.Model</td>
+                    <td class="td-text">@car.CarPlate</td>
+                    <td class="td-text">@car.Vin</td>
+                    <td> <img  src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true" /> </td>
+                    <td class="td-text">
+                        <a class="btn btn-primary" asp-controller="Car"  asp-route-Id="@car.Id" asp-action="Edit"> Edit</a>
+                        <a class="btn btn-danger" asp-controller="Car"  asp-route-Id="@car.Id" asp-action="Delete"> Delete</a>
+                        <a class="btn btn-primary" asp-controller="Car"   asp-route-Id="@car.Id"  asp-action="Details"> Details</a>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+

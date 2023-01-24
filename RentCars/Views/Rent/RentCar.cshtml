@@ -1,0 +1,29 @@
+﻿@model RentCars.ModelsDto.ReservationDto
+
+@{
+    ViewData["Title"] = "RentCar";
+    var imagePath = "~/Images/" + (Model.Model + ".jpg");
+}
+
+<h1>RentCar</h1>
+
+<p><img  src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true" /></p>
+    <p>@Model.Brand</p>
+    <p>@Model.Model</p>
+    <p>@Model.Price</p>
+<form class="form-control" asp-controller="Rent" asp-action="RentCarPost" method="post">
+
+    <p><input type="text" asp-for="CarId" hidden="hidden"/></p>
+    <p><input type="text" asp-for="UserId" hidden="hidden"/></p>
+    <p><input type="text" asp-for="Price" hidden="hidden"/></p>
+    <p><input type="text" asp-for="City"/></p>
+    <p><input type="text" asp-for="DateOfRent"/></p>
+    <p><input type="text" asp-for="DateOfReturn"/></p>
+    <p><input type="text" asp-for="FirstName"/></p>
+    <p><input type="text" asp-for="LastName"/></p>
+    <p><input type="text" asp-for="Email"/></p>
+   
+
+    <p><input type="submit" class="btn btn-success"/></p>
+</form>
+

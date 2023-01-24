@@ -1,0 +1,31 @@
+﻿@model RentCars.ModelsDto.CarDto
+@{
+    ViewData["Title"] = "GetDetails";
+}
+
+<h1>Details</h1>
+
+<label>Brand:</label>
+<p>@Model.Brand</p>
+<label>Model:</label>
+<p>@Model.Model</p>
+<label>Max Speed:</label>
+<p>@Model.MaxSpeed</p>
+<label>Mileage:</label>
+<p>@Model.Milage</p>
+
+<label>Vin:</label>
+<p>@Model.Vin</p>
+<label>Car Plate:</label>
+<p>@Model.CarPlate</p>
+<label>Number of Seats:</label>
+<p>@Model.NumberOfSeats</p>
+<label>Year:</label>
+<p>@Model.Year</p>
+<label>Price:</label>
+<p>@Model.Price zł</p>
+<label>Transmission:</label>
+<p>@Model.Transmisson</p>
+
+
+<a asp-action="GetCars" class="btn btn-primary"> Powrót</a>

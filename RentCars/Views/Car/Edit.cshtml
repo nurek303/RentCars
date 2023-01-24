@@ -1,0 +1,39 @@
+﻿@model RentCars.ModelsDto.CarDto
+@{
+    ViewData["Title"] = "Edit";
+    string imagePath = "~/Images/" + (Model.Model + ".jpg");
+}
+
+<form class="form-group" asp-action="EditPost" asp-controller="Car" enctype="multipart/form-data">
+        
+       
+        <p> <input type="text" asp-for="Id" value="@Model.Id" hidden="hidden"/></p>
+        <p> <input type="text" asp-for="Brand" value="@Model.Brand"/></p>
+        <p> <input type="text" asp-for="Model" value="@Model.Model"/></p>
+        <p> <input type="text" asp-for="Price" value="@Model.Price"/></p>
+        <p> <input type="number" asp-for="MaxSpeed" value="@Model.MaxSpeed"/></p>
+        <p> <input type="text" asp-for="Milage" value="@Model.Milage"/></p>
+        <p> <input type="text" asp-for="Transmisson" value="@Model.Transmisson"/></p>
+        <p> <input type="number" asp-for="Year" value="@Model.Year"/></p>
+        <p> <input type="number" asp-for="NumberOfSeats" value="@Model.NumberOfSeats"/></p>
+        <p> <input type="text" asp-for="CarPlate" value="@Model.CarPlate"/></p>
+        <p> <input type="text" asp-for="FilePath" value="@Model.FilePath" hidden="hidden"/></p>
+        <p> <input type="text" asp-for="Vin" value="@Model.Vin"/></p>
+
+       <div class="form-group"> 
+           <div>
+               <span>Current Image</span>
+            <p><img  src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true" /></p>
+           </div>
+            <label>Image:</label>
+            <input type="file" asp-for="Image" />
+
+       </div>
+
+        <input type="submit" class="btn btn-success" />
+
+
+
+
+</form>
+

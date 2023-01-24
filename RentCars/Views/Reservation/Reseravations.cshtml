@@ -1,0 +1,44 @@
+﻿@model IEnumerable<RentCars.ModelsDto.ReservationHistoryDto>
+@{
+    ViewData["Title"] = "Reseravations";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Data Rezerwacji</th>
+            <th>Data Zwrotu</th>
+            <th>Miasto</th>
+            <th>Cena</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var res in Model)
+            {
+                var imagePath = "~/Images/" + (res.FilePath);
+
+                <tr>
+                    <td><img src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true"/></td>
+                    <td>@res.Brand</td>
+                    <td>@res.Model</td>
+                    <td>@res.DateOfRent</td>
+                    <td>@res.DateOfReturn</td>
+                    <td>@res.City</td>
+                    <td>@res.FullPrice</td>
+                    @if(@res.DateOfRent != null)
+                    {
+                        <td style="color: green">Aktualne</td>
+                    }
+                    else{
+                        <td style="color: red">Nieaktualne</td>
+                    }
+                </tr>
+            }    
+    </tbody>
+
+</table>
+
