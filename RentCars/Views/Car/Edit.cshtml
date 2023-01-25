@@ -8,17 +8,17 @@
         
        
         <p> <input type="text" asp-for="Id" value="@Model.Id" hidden="hidden"/></p>
-        <p> <input type="text" asp-for="Brand" value="@Model.Brand"/></p>
-        <p> <input type="text" asp-for="Model" value="@Model.Model"/></p>
-        <p> <input type="text" asp-for="Price" value="@Model.Price"/></p>
-        <p> <input type="number" asp-for="MaxSpeed" value="@Model.MaxSpeed"/></p>
-        <p> <input type="text" asp-for="Milage" value="@Model.Milage"/></p>
-        <p> <input type="text" asp-for="Transmisson" value="@Model.Transmisson"/></p>
-        <p> <input type="number" asp-for="Year" value="@Model.Year"/></p>
-        <p> <input type="number" asp-for="NumberOfSeats" value="@Model.NumberOfSeats"/></p>
-        <p> <input type="text" asp-for="CarPlate" value="@Model.CarPlate"/></p>
+        <p> <input type="text" asp-for="Brand" value="@Model.Brand" required/></p>
+        <p> <input type="text" asp-for="Model" value="@Model.Model" required/></p>
+        <p> <input type="text" asp-for="Price" value="@Model.Price" required/></p>
+        <p> <input type="number" asp-for="MaxSpeed" value="@Model.MaxSpeed" required/></p>
+        <p> <input type="text" asp-for="Milage" value="@Model.Milage" required/></p>
+        <p> <input type="text" asp-for="Transmisson" value="@Model.Transmisson" required/></p>
+        <p> <input type="number" asp-for="Year" value="@Model.Year" required/></p>
+        <p> <input type="number" asp-for="NumberOfSeats" value="@Model.NumberOfSeats" required/></p>
+        <p> <input type="text" asp-for="CarPlate" value="@Model.CarPlate" required/></p>
         <p> <input type="text" asp-for="FilePath" value="@Model.FilePath" hidden="hidden"/></p>
-        <p> <input type="text" asp-for="Vin" value="@Model.Vin"/></p>
+        <p> <input type="text" asp-for="Vin" value="@Model.Vin" required/></p>
 
        <div class="form-group"> 
            <div>
@@ -26,7 +26,7 @@
             <p><img  src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true" /></p>
            </div>
             <label>Image:</label>
-            <input type="file" asp-for="Image" />
+            <input type="file" asp-for="Image"/>
 
        </div>
 
@@ -36,4 +36,3 @@
 
 
 </form>
-

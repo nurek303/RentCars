@@ -11,20 +11,20 @@
     @using (Html.BeginForm("CreatePost", "Car", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
 
-        <p> <input type="text" asp-for="Brand" placeholder="Brand"/></p>
-        <p> <input type="text" asp-for="Model" placeholder="Model"/></p>
-        <p> <input type="number" asp-for="Price" placeholder="Price"/></p>
-        <p> <input type="number" asp-for="MaxSpeed" placeholder="Max Speed"/></p>
-        <p> <input type="text" asp-for="Milage" placeholder="Milage"/></p>
-        <p> <input type="text" asp-for="Transmisson" placeholder="Transmisson"/></p>
-        <p> <input type="number" asp-for="Year" placeholder="Year"/></p>
-        <p> <input type="number" asp-for="NumberOfSeats" placeholder="Number Of Seats"/></p>
-        <p> <input type="text" asp-for="CarPlate" placeholder="Car Plate"/></p>
-        <p> <input type="number" asp-for="Vin" placeholder="Vin"/></p>
+        <p> <input type="text" asp-for="Brand" placeholder="Brand" required/></p>
+        <p> <input type="text" asp-for="Model" placeholder="Model" required/></p>
+        <p> <input type="number" asp-for="Price" placeholder="Price" required/></p>
+        <p> <input type="number" asp-for="MaxSpeed" placeholder="Max Speed" required/></p>
+        <p> <input type="text" asp-for="Milage" placeholder="Milage" required/></p>
+        <p> <input type="text" asp-for="Transmisson" placeholder="Transmisson" required/></p>
+        <p> <input type="number" asp-for="Year" placeholder="Year" required/></p>
+        <p> <input type="number" asp-for="NumberOfSeats" placeholder="Number Of Seats" required/></p>
+        <p> <input type="text" asp-for="CarPlate" placeholder="Car Plate" required/></p>
+        <p> <input type="number" asp-for="Vin" placeholder="Vin" required/></p>
 
        <div class="form-group">
             <label>Image:</label>
-            <input type="file" asp-for="Image"/>
+            <input type="file" asp-for="Image" required/>
        </div>
 
         <input type="submit" class="btn btn-success" />

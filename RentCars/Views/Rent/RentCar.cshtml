@@ -10,7 +10,7 @@
 <p><img  src="@imagePath" class="jpg" height="80px" width="120px"  asp-append-version="true" /></p>
     <p>@Model.Brand</p>
     <p>@Model.Model</p>
-    <p>@Model.Price</p>
+    <p>@Model.Price zł</p>
 <form class="form-control" asp-controller="Rent" asp-action="RentCarPost" method="post">
 
     <p><input type="text" asp-for="CarId" hidden="hidden"/></p>
@@ -19,11 +19,9 @@
     <p><input type="text" asp-for="City"/></p>
     <p><input type="text" asp-for="DateOfRent"/></p>
     <p><input type="text" asp-for="DateOfReturn"/></p>
-    <p><input type="text" asp-for="FirstName"/></p>
-    <p><input type="text" asp-for="LastName"/></p>
-    <p><input type="text" asp-for="Email"/></p>
-   
 
+    <p><input type="text" asp-for="FirstName" placeholder="Imię" required/></p>
+    <p><input type="text" asp-for="LastName"  placeholder="Nazwisko"required/></p>
+   
     <p><input type="submit" class="btn btn-success"/></p>
 </form>
-
