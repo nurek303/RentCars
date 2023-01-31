@@ -79,8 +79,8 @@ namespace RentCars.BackgroundServices
         {
             MailMessage message = new MailMessage();
 
-            string fromMail = "synapsetest1244@gmail.com";
-            string fromPassword = "nybpmisrdtvehhhx";
+            string fromMail = "justkurek71@gmail.com";
+            string fromPassword = "juoxeguqkdcyywff";
 
             message.From = new MailAddress(fromMail);
 
